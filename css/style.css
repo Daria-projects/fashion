@@ -97,3 +97,18 @@ footer {
   color: white;
   cursor: pointer;
 }
+/* index.html */
+#catListeContainer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#catListeContainer a {
+  padding: 2rem;
+  background-color: orange;
+  text-decoration: none;
+  color: inherit;
+  text-align: center;
+}
