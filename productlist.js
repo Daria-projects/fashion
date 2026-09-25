@@ -1,4 +1,7 @@
-const endpoint = "https://kea-alt-del.dk/t7/api/products";
+const cat = new URLSearchParams(window.location.search).get("cat");
+const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${cat}`;
+
+document.querySelector("h2").textContent = cat;
 const produktListe = document.querySelector(".produktliste");
 
 fetch(endpoint)
