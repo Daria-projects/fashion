@@ -224,3 +224,13 @@ footer .copyright {
   padding-top: 1rem;
   font-size: 0.8rem;
 }
+main > h1,
+main > h2 {
+  padding: 0 2rem;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0 2rem 2rem;
+}

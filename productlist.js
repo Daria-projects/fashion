@@ -1,15 +1,33 @@
 const cat = new URLSearchParams(window.location.search).get("cat");
-const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${cat}`;
+const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${cat}&limit=30`;
 
 document.querySelector("h2").textContent = cat;
 const produktListe = document.querySelector(".produktliste");
 
+document.querySelectorAll("button").forEach((knap) => knap.addEventListener("click", filter));
+
+let allData;
+
 fetch(endpoint)
   .then((res) => res.json())
-  .then((json) => visData(json));
+  .then((json) => {
+    allData = json;
+    visData(allData);
+  });
+
+function filter(e) {
+  const valgt = e.target.textContent;
+  if (valgt == "All") {
+    visData(allData);
+  } else {
+    const udsnit = allData.filter((element) => element.gender == valgt);
+    visData(udsnit);
+  }
+}
 
 function visData(json) {
   console.log(json);
+  document.querySelector(".antal").textContent = json.length;
   produktListe.innerHTML = json
     .map((element) => {
       const tilbudspris = Math.round(element.price - (element.price * element.discount) / 100);
