@@ -127,6 +127,8 @@ footer {
   left: 1rem;
   background-color: black;
   color: white;
+}
+
 /* index.html */
 #catListeContainer {
   display: grid;
@@ -141,4 +143,8 @@ footer {
   text-decoration: none;
   color: inherit;
   text-align: center;
+}
+
+.billede {
+  position: relative;
 }
