@@ -8,7 +8,7 @@ fetch(`https://kea-alt-del.dk/t7/api/products/${productId}`)
 function visProdukt(data) {
   console.log(data);
   productContainer.innerHTML = `
-    <a href="productlist.html">Tilbage</a>
+    <a href="productlist.html?cat=${data.category}">Tilbage</a>
     <img src="https://kea-alt-del.dk/t7/images/webp/640/${data.id}.webp" alt="Produktbillede" />
     <h2>${data.productdisplayname}</h2>
     <p>Type: ${data.articletype}</p>
