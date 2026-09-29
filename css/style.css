@@ -97,6 +97,36 @@ footer {
   color: white;
   cursor: pointer;
 }
+/* betinget visning */
+.card-link {
+  position: relative;
+}
+
+.udsolgt {
+  filter: grayscale(1);
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+.tilbudslabel,
+.udsolgtlabel {
+  position: absolute;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  margin: 0;
+}
+
+.tilbudslabel {
+  right: 1rem;
+  background-color: yellow;
+  color: black;
+  rotate: -10deg;
+}
+
+.udsolgtlabel {
+  left: 1rem;
+  background-color: black;
+  color: white;
 /* index.html */
 #catListeContainer {
   display: grid;
