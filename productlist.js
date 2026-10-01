@@ -4,25 +4,42 @@ const endpoint = `https://kea-alt-del.dk/t7/api/products?category=${cat}&limit=3
 document.querySelector("h2").textContent = cat;
 const produktListe = document.querySelector(".produktliste");
 
-document.querySelectorAll("button").forEach((knap) => knap.addEventListener("click", filter));
+document.querySelectorAll("#filter button").forEach((knap) => knap.addEventListener("click", filter));
+document.querySelectorAll("#sortering button").forEach((knap) => knap.addEventListener("click", sorter));
 
 let allData;
+let udsnit;
 
 fetch(endpoint)
   .then((res) => res.json())
   .then((json) => {
     allData = json;
-    visData(allData);
+    udsnit = allData;
+    visData(udsnit);
   });
 
 function filter(e) {
   const valgt = e.target.textContent;
   if (valgt == "All") {
-    visData(allData);
+    udsnit = allData;
   } else {
-    const udsnit = allData.filter((element) => element.gender == valgt);
-    visData(udsnit);
+    udsnit = allData.filter((element) => element.gender == valgt);
   }
+  visData(udsnit);
+}
+
+function sorter(e) {
+  const valgt = e.target.textContent;
+  if (valgt == "Pris lav-høj") {
+    udsnit.sort((a, b) => a.price - b.price);
+  } else if (valgt == "Pris høj-lav") {
+    udsnit.sort((a, b) => b.price - a.price);
+  } else if (valgt == "A-Z") {
+    udsnit.sort((a, b) => a.productdisplayname.localeCompare(b.productdisplayname));
+  } else if (valgt == "Z-A") {
+    udsnit.sort((a, b) => b.productdisplayname.localeCompare(a.productdisplayname));
+  }
+  visData(udsnit);
 }
 
 function visData(json) {

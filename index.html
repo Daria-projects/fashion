@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="da">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -10,19 +10,37 @@
   <body>
     <header>
       <nav>
+        <a href="index.html" class="logo" aria-label="NOON forside">
+          <svg viewBox="0 0 236 60" fill="currentColor" stroke="currentColor">
+            <rect x="0" y="0" width="12" height="60" />
+            <rect x="32" y="0" width="12" height="60" />
+            <polygon points="0,0 12,0 44,60 32,60" />
+            <circle cx="84" cy="30" r="24" fill="none" stroke-width="12" />
+            <line x1="84" y1="30" x2="84" y2="16" stroke-width="6" stroke-linecap="round" />
+            <circle cx="84" cy="30" r="4" />
+            <circle cx="152" cy="30" r="24" fill="none" stroke-width="12" />
+            <rect x="192" y="0" width="12" height="60" />
+            <rect x="224" y="0" width="12" height="60" />
+            <polygon points="192,0 204,0 236,60 224,60" />
+          </svg>
+        </a>
         <a href="index.html">Forside</a>
         <a href="about.html">Om os</a>
       </nav>
     </header>
     <main>
-      <h1>Webshop</h1>
-      <h2>Kategorier</h2>
+      <section class="hero">
+        <h1>Det du har brug for. Intet andet.</h1>
+        <p>Ny sæson. Nye favoritter.</p>
+        <a href="#catListeContainer">Shop nu</a>
+      </section>
+      <h2>Shop efter kategorier</h2>
       <section id="catListeContainer"></section>
     </main>
 
     <footer>
       <div>
-        <h3>Webshop</h3>
+        <h3>NOON</h3>
         <p>Tøj og tilbehør til hele familien</p>
       </div>
       <div>
@@ -32,10 +50,10 @@
       </div>
       <div>
         <h3>Kontakt</h3>
-        <p>kontakt@webshop.dk</p>
-        <p>+45 12 34 56 78</p>
+        <p><a href="tel:+4500000000">+45 00 00 00 00</a></p>
+        <p><a href="mailto:kontakt@noon.dk">kontakt@noon.dk</a></p>
       </div>
-      <p class="copyright">© 2026 Webshop</p>
+      <p class="copyright">© 2026 NOON</p>
     </footer>
     <script src="index.js"></script>
   </body>
