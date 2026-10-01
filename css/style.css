@@ -234,3 +234,60 @@ main > h2 {
   gap: 0.5rem;
   padding: 0 2rem 2rem;
 }
+footer a {
+  color: inherit;
+  text-decoration: none;
+}
+/* logo */
+nav {
+  align-items: center;
+}
+
+.logo {
+  margin-right: auto;
+}
+
+.logo svg {
+  display: block;
+  height: 24px;
+}
+/* hero på forsiden */
+.hero {
+  padding: 6rem 2rem;
+  margin-bottom: 2rem;
+  background-color: #1a1a1a;
+  color: white;
+}
+
+.hero h1 {
+  max-width: 600px;
+  margin: 0 0 1rem;
+  font-size: 2.5rem;
+}
+
+.hero p {
+  margin: 0 0 2rem;
+  color: #ccc;
+}
+
+.hero a {
+  display: inline-block;
+  padding: 0.8rem 2rem;
+  background-color: white;
+  color: #1a1a1a;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.hero a:hover {
+  background-color: #ccc;
+}
+/* 404 */
+.fejlkode {
+  font-size: 6rem;
+  font-weight: 800;
+  line-height: 1;
+  margin: 0 0 1rem;
+  color: white;
+}
